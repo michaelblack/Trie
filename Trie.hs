@@ -6,8 +6,9 @@ import Control.Applicative
 import Prelude hiding (lookup)
 import Data.List hiding (insert, lookup)
 
-data Trie k v = Trie {value :: Maybe v,
-                      children :: Map.Map k (Trie k v)} deriving Show
+data Trie k v = Trie {value :: !(Maybe v),
+                      children :: !(Map.Map k (Trie k v))}
+              deriving Show
 
 -- | Contructs an empty Trie
 emptyTrie :: Trie k v
