@@ -11,7 +11,7 @@ flush = hFlush stdout
 csi :: Int -> Char -> String
 csi num c = "\ESC[" ++ (show num) ++ [c]
 
-bold :: String
+underline :: String
 underline = csi 4 'm'
 
 resetFormat :: String
