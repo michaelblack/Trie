@@ -17,10 +17,7 @@ emptyTrie = Trie Nothing Map.empty
 -- | Looks up a trie node by its key string
 lookupSub :: Ord k => [k] -> Trie k v -> Maybe (Trie k v)
 lookupSub [] trie = Just trie
-lookupSub (k:ks) trie = let found = Map.lookup k (children trie)
-                        in if isNothing found
-                           then Nothing
-                           else lookupSub ks (fromJust found)
+lookupSub (k:ks) trie = Map.lookup k (children trie) >>= lookupSub ks
 
 -- | Looks up a value by its key string
 lookup :: Ord k => [k] -> Trie k v -> Maybe v
