@@ -7,4 +7,4 @@ The sample program `main.hs` loads words from a file and gives the first 5 autoc
 
 Example :
 
-![sample run](./Screen\ Shot\ 2014-02-17\ at\ 8.19.28\ PM.png "A sample run"):
+![sample run](./Screen\ Shot\ 2014-02-17\ at\ 8.19.28\ PM.png "A sample run")
